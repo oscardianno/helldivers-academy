@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="204.517" height="200.214" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd" viewBox="0 0 725.47 710.21">
+    <defs>
+        <radialGradient id="id0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 .97808 -1.02116 0 708 7)" cx="350.66" cy="349.99" r="348.17" fx="350.66" fy="349.99">
+            <stop offset="0" style="stop-opacity:1;stop-color:#e6e6e6"/>
+            <stop offset=".639" style="stop-opacity:1;stop-color:#d6d7d6"/>
+            <stop offset=".827" style="stop-opacity:1;stop-color:#c3c3c3"/>
+            <stop offset="1" style="stop-opacity:1;stop-color:#b0b0b0"/>
+        </radialGradient>
+        <style>
+            .str0{stroke:#272827;stroke-width:18.92;stroke-miterlimit:22.9256}
+        </style>
+    </defs>
+    <g id="Layer_x0020_1">
+        <path class="str0" d="M19.68 330.44 293.97 56.15l6.28-6.28c16.39-16.39 19.59-30.2 42.96-30.2h58.31c19.9 0 36.19 16.29 36.19 36.19V196.22h278.3v327.96h-278.3v140.36c0 19.9-16.29 36.19-36.19 36.19H343.21c-23.37 0-26.57-13.81-42.96-30.2l-6.28-6.28L19.68 389.96v-59.53z" style="fill:#272827"/>
+        <path class="str0" d="M9.46 320.23 283.75 45.94l6.28-6.28c16.39-16.39 19.59-30.2 42.96-30.2h58.31c19.9 0 36.19 16.29 36.19 36.19V186.01h278.3v327.96h-278.3v140.36c0 19.9-16.29 36.19-36.19 36.19H332.99c-23.37 0-26.57-13.81-42.96-30.2l-6.28-6.28L9.46 379.75v-59.53z" style="fill:url(#id0)"/>
+    </g>
+</svg>
