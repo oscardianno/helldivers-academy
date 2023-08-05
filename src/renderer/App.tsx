@@ -3,10 +3,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const ArrowDirections: Record<string, string> = {
-  w: '↑',
-  a: '←',
-  s: '↓',
-  d: '→',
+  W: 'W',
+  w: 'W',
+  A: 'A',
+  a: 'A',
+  S: 'S',
+  s: 'S',
+  D: 'D',
+  d: 'D',
 };
 
 const ArrowApp: React.FC = () => {
@@ -14,22 +18,16 @@ const ArrowApp: React.FC = () => {
   const [showArrows, setShowArrows] = useState(true);
 
   const handleKeyDown = (event: KeyboardEvent) => {
+    const arrowDirection = ArrowDirections[event.key];
     // Prevent default browser behavior for specific keys
-    if (
-      event.key === 'Control' ||
-      event.key === 'w' ||
-      event.key === 'a' ||
-      event.key === 's' ||
-      event.key === 'd'
-    ) {
+    if (event.key === 'Control' || arrowDirection) {
       event.preventDefault();
     }
 
     if (event.key === 'Control') {
       setShowArrows(true);
-    } else if (event.ctrlKey && event.key in ArrowDirections) {
-      const direction = ArrowDirections[event.key];
-      setArrowSequence((prevSequence) => prevSequence + direction);
+    } else if (event.ctrlKey && arrowDirection) {
+      setArrowSequence((prevSequence) => prevSequence + arrowDirection);
     }
   };
 
