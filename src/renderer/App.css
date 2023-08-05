@@ -36,8 +36,20 @@ body {
 }
 
 .arrow {
+  display: flex;
+  gap: 1rem;
   /* color: #000; */
   font-size: 4rem;
   font-weight: 900;
   padding: 1rem;
+}
+
+.arrow-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url('/assets/icons/down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

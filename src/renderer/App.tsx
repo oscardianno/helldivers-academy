@@ -1,5 +1,9 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import up from '../../assets/icons/up.svg';
+import left from '../../assets/icons/left.svg';
+import down from '../../assets/icons/down.svg';
+import right from '../../assets/icons/right.svg';
 import './App.css';
 
 const ArrowDirections: Record<string, string> = {
@@ -14,7 +18,7 @@ const ArrowDirections: Record<string, string> = {
 };
 
 const ArrowApp: React.FC = () => {
-  const [arrowSequence, setArrowSequence] = useState('↑←↓');
+  const [arrowSequence, setArrowSequence] = useState('WASD');
   const [showArrows, setShowArrows] = useState(true);
 
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -38,6 +42,13 @@ const ArrowApp: React.FC = () => {
     }
   };
 
+  const arrowToIcon: { [key: string]: string } = {
+    W: up,
+    A: left,
+    S: down,
+    D: right,
+  };
+
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('keyup', handleKeyUp);
@@ -47,11 +58,17 @@ const ArrowApp: React.FC = () => {
     };
   }, []);
 
+  const icons = arrowSequence.split('').map((arrow) => arrowToIcon[arrow]);
+
   return (
     <div className='App'>
       {showArrows && (
         <div className='arrow-container'>
-          <div className='arrow'>{arrowSequence}</div>
+          <div className='arrow'>
+            {icons.map((icon) => (
+              <img src={icon} width={80} height={80} />
+            ))}
+          </div>
         </div>
       )}
     </div>
