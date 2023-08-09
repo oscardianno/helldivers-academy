@@ -16,29 +16,31 @@ body {
   font-family: sans-serif;
   overflow-y: hidden;
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+}
+
+.top-container {
+  height: 30vh;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container {
+.arrows-container {
+  height: 40vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #f0f0f0;
-}
-
-.arrow-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.arrow {
-  display: flex;
   gap: 1rem;
-  /* color: #000; */
   font-size: 4rem;
   font-weight: 900;
   padding: 1rem;
@@ -48,8 +50,18 @@ body {
   display: block;
   width: 40px;
   height: 40px;
-  background-image: url('/assets/icons/down.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.bottom-container {
+  height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.footer {
+  padding-bottom: 10px;
 }

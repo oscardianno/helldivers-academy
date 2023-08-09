@@ -18,7 +18,8 @@ const ArrowDirections: Record<string, string> = {
 };
 
 const ArrowApp: React.FC = () => {
-  const [arrowSequence, setArrowSequence] = useState('WASD');
+  const [showIntro, setShowIntro] = useState(true);
+  const [arrowSequence, setArrowSequence] = useState('');
   const [showArrows, setShowArrows] = useState(true);
 
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -32,6 +33,7 @@ const ArrowApp: React.FC = () => {
       setShowArrows(true);
     } else if (event.ctrlKey && arrowDirection) {
       setArrowSequence((prevSequence) => prevSequence + arrowDirection);
+      setShowIntro(false);
     }
   };
 
@@ -62,15 +64,31 @@ const ArrowApp: React.FC = () => {
 
   return (
     <div className='App'>
-      {showArrows && (
-        <div className='arrow-container'>
-          <div className='arrow'>
+      <div className='top-container'>
+        {showIntro ? (
+          <div className='instructions-container'>
+            <h3>Hold CTRL and type Stratagem sequences using the WASD keys</h3>
+          </div>
+        ) : (
+          <div className='stratagem-container'>
+            <h2>Request...</h2>
+          </div>
+        )}
+      </div>
+      <div className='arrows-container'>
+        {showArrows && (
+          <div className='arrows'>
             {icons.map((icon) => (
-              <img src={icon} width={80} height={80} />
+              <img src={icon} width={80} height={80} alt='arrow' />
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
+      <div className='bottom-container'>
+        <p className='footer'>
+          Made with <span className='heart'>♥</span> for democracy and freedom!
+        </p>
+      </div>
     </div>
   );
 };
