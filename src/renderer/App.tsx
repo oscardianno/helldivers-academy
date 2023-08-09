@@ -1,5 +1,6 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { StratagemsMap } from 'constants/stratagems-sequences';
 import up from '../../assets/icons/up.svg';
 import left from '../../assets/icons/left.svg';
 import down from '../../assets/icons/down.svg';
@@ -61,6 +62,7 @@ const ArrowApp: React.FC = () => {
   }, []);
 
   const icons = arrowSequence.split('').map((arrow) => arrowToIcon[arrow]);
+  const recognizedSequence = StratagemsMap.get(arrowSequence);
 
   return (
     <div className='App'>
@@ -72,6 +74,7 @@ const ArrowApp: React.FC = () => {
         ) : (
           <div className='stratagem-container'>
             <h2>Request...</h2>
+            <h3>{recognizedSequence || '?'}</h3>
           </div>
         )}
       </div>

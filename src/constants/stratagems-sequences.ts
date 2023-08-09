@@ -64,3 +64,13 @@ export const SpecialStratagems = [
   { name: 'ME-1 Sniffer Metal Detector', sequence: 'SSDW' },
   { name: 'Emergency Beacon', sequence: 'WSDW' },
 ];
+
+export const StratagemsMap = new Map<string, string>();
+[
+  ...SupplyStratagems,
+  ...DefensiveStratagems,
+  ...OffensiveStratagems,
+  ...SpecialStratagems,
+].forEach((stratagem) => {
+  StratagemsMap.set(stratagem.sequence, stratagem.name);
+});
