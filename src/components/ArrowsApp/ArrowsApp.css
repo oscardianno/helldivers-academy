@@ -22,14 +22,19 @@ body {
 }
 
 .top-container {
-  height: 30vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.instructions-container,
+.stratagem-container {
+  padding-top: 10px;
 }
 
 .arrows-container {
-  height: 40vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
