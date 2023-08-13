@@ -66,57 +66,25 @@ export const SupplyStratagems: IStratagem[] = [
   { name: 'MGX-42 Machine Gun', sequence: 'SASWWA', icon: MGX_42_Machine_Gun },
   { name: 'LAS-98 Laser Cannon', sequence: 'SASWA', icon: LAS_98_Laser_Cannon },
   { name: 'AC-22 Dum-Dum', sequence: 'SASWWD', icon: AC_22_Dum_Dum },
-  {
-    name: 'Obliterator Grenade Launcher',
-    sequence: 'SAWAS',
-    icon: Obliterator_Grenade_Launcher,
-  },
+  { name: 'Obliterator Grenade Launcher', sequence: 'SAWAS', icon: Obliterator_Grenade_Launcher },
   { name: 'M-25 Rumbler', sequence: 'SAWAA', icon: M_25_Rumbler },
   { name: 'FLAM-40 Incinerator', sequence: 'SASDA', icon: FLAM_40_Incinerator },
   { name: 'TOX-13 Avenger', sequence: 'SASDD', icon: TOX_13_Avenger },
-  {
-    name: 'RL-112 Recoilless Rifle',
-    sequence: 'SADDA',
-    icon: RL_112_Recoilless_Rifle,
-  },
+  { name: 'RL-112 Recoilless Rifle', sequence: 'SADDA', icon: RL_112_Recoilless_Rifle },
   { name: 'EAT-17', sequence: 'SADWS', icon: EAT_17 },
   { name: 'MLS-4X Commando', sequence: 'SAWSD', icon: MLS_4X_Commando },
   { name: 'AD-334 Guard Dog', sequence: 'SWAWDS', icon: AD_334_Guard_Dog },
   { name: 'AD-289 Angel', sequence: 'SWAADS', icon: AD_289_Angel },
   { name: 'Resupply Pack', sequence: 'SWSSD', icon: Resupply_Pack },
   { name: 'LIFT-850 Jump Pack', sequence: 'SWWSW', icon: LIFT_850_Jump_Pack },
-  {
-    name: 'SH-32 Directional Kinetic Shield',
-    sequence: 'SWADAS',
-    icon: SH_32_Directional_Kinetic_Shield,
-  },
-  {
-    name: 'SH-20 Shield Generator Pack',
-    sequence: 'SWADAD',
-    icon: SH_20_Shield_Generator_Pack,
-  },
+  { name: 'SH-32 Directional Kinetic Shield', sequence: 'SWADAS', icon: SH_32_Directional_Kinetic_Shield },
+  { name: 'SH-20 Shield Generator Pack', sequence: 'SWADAD', icon: SH_20_Shield_Generator_Pack },
   { name: 'REP-80', sequence: 'SSADS', icon: REP_80 },
   { name: 'REC-6 Demolisher', sequence: 'SADWW', icon: REC_6_Demolisher },
-  {
-    name: 'EXO-44 Walker Exosuit',
-    sequence: 'SDWASS',
-    icon: EXO_44_Walker_Exosuit,
-  },
-  {
-    name: 'EXO-48 Obsidian Exosuit',
-    sequence: 'SDWASA',
-    icon: EXO_48_Obsidian_Exosuit,
-  },
-  {
-    name: 'EXO-51 Lumberer Exosuit',
-    sequence: 'SDWASD',
-    icon: EXO_51_Lumberer_Exosuit,
-  },
-  {
-    name: 'MC-109 Hammer Motorcycle',
-    sequence: 'SDSAAW',
-    icon: MC_109_Hammer_Motorcycle,
-  },
+  { name: 'EXO-44 Walker Exosuit', sequence: 'SDWASS', icon: EXO_44_Walker_Exosuit },
+  { name: 'EXO-48 Obsidian Exosuit', sequence: 'SDWASA', icon: EXO_48_Obsidian_Exosuit },
+  { name: 'EXO-51 Lumberer Exosuit', sequence: 'SDWASD', icon: EXO_51_Lumberer_Exosuit },
+  { name: 'MC-109 Hammer Motorcycle', sequence: 'SDSAAW', icon: MC_109_Hammer_Motorcycle },
   { name: 'TD-110 Bastion', sequence: 'SDSAWD', icon: TD_110_Bastion },
   { name: 'M5 APC', sequence: 'SDSAAD', icon: M5_APC },
   { name: 'M5-32 HAV', sequence: 'SDSAWS', icon: M5_32_HAV },
@@ -125,55 +93,19 @@ export const SupplyStratagems: IStratagem[] = [
 export const DefensiveStratagems: IStratagem[] = [
   { name: 'Humblebee UAV drone', sequence: 'AWD', icon: Humblebee_UAV_drone },
   { name: 'Distractor Beacon', sequence: 'ASD', icon: Distractor_Beacon },
-  {
-    name: 'AT-47 Anti-Tank Emplacement',
-    sequence: 'AAWWDA',
-    icon: AT_47_Anti_Tank_Emplacement,
-  },
-  {
-    name: 'A/MG-11 Minigun Turret',
-    sequence: 'ASWDA',
-    icon: A_MG_II_Minigun_Turret,
-  },
-  {
-    name: 'A/RX-34 Railcannon Turret',
-    sequence: 'ASWAD',
-    icon: A_RX_34_Railcannon_Turret,
-  },
-  {
-    name: 'A/GL-8 Launcher Turret',
-    sequence: 'ASWDDS',
-    icon: A_GL_8_Launcher_Turret,
-  },
+  { name: 'AT-47 Anti-Tank Emplacement', sequence: 'AAWWDA', icon: AT_47_Anti_Tank_Emplacement },
+  { name: 'A/MG-11 Minigun Turret', sequence: 'ASWDA', icon: A_MG_II_Minigun_Turret },
+  { name: 'A/RX-34 Railcannon Turret', sequence: 'ASWAD', icon: A_RX_34_Railcannon_Turret },
+  { name: 'A/GL-8 Launcher Turret', sequence: 'ASWDDS', icon: A_GL_8_Launcher_Turret },
   { name: 'A/AC-6 Tesla Tower', sequence: 'ASSWDA', icon: A_AC_6_Tesla_Tower },
-  {
-    name: 'Airdropped Anti-Personnel Mines',
-    sequence: 'ADSW',
-    icon: Airdropped_Anti_Personnel_Mines,
-  },
-  {
-    name: 'Anti-Personnel Barrier',
-    sequence: 'ADSSD',
-    icon: Anti_Personnel_Barrier,
-  },
-  {
-    name: 'Thunderer Smoke Round',
-    sequence: 'DSWWS',
-    icon: Thunderer_Smoke_Round,
-  },
-  {
-    name: 'Airdropped Stun Mines',
-    sequence: 'ADWS',
-    icon: Airdropped_Stun_Mines,
-  },
+  { name: 'Airdropped Anti-Personnel Mines', sequence: 'ADSW', icon: Airdropped_Anti_Personnel_Mines },
+  { name: 'Anti-Personnel Barrier', sequence: 'ADSSD', icon: Anti_Personnel_Barrier },
+  { name: 'Thunderer Smoke Round', sequence: 'DSWWS', icon: Thunderer_Smoke_Round },
+  { name: 'Airdropped Stun Mines', sequence: 'ADWS', icon: Airdropped_Stun_Mines },
 ];
 
 export const OffensiveStratagems: IStratagem[] = [
-  {
-    name: 'Static Field Conductors',
-    sequence: 'DWAS',
-    icon: Static_Field_Conductors,
-  },
+  { name: 'Static Field Conductors', sequence: 'DWAS', icon: Static_Field_Conductors },
   { name: 'Airstrike', sequence: 'DWSDA', icon: Airstrike },
   { name: 'Vindicator Dive Bomb', sequence: 'DDD', icon: Vindicator_Dive_Bomb },
   { name: 'Strafing Run', sequence: 'DDW', icon: Strafing_Run },
@@ -182,32 +114,16 @@ export const OffensiveStratagems: IStratagem[] = [
   { name: 'Close Air Support', sequence: 'DDSA', icon: Close_Air_Support },
   { name: 'Missile Barrage', sequence: 'DSSSAS', icon: Missile_Barrage },
   { name: 'Thunderer Barrage', sequence: 'DSWWAS', icon: Thunderer_Barrage },
-  {
-    name: 'Sledge Precision Artillery',
-    sequence: 'DWAWSD',
-    icon: Sledge_Precision_Artillery,
-  },
-  {
-    name: 'Orbital Laser Strike',
-    sequence: 'DWAWDA',
-    icon: Orbital_Laser_Strike,
-  },
-  {
-    name: 'Shredder Missile Strike',
-    sequence: 'DADASSD',
-    icon: Shredder_Missile_Strike,
-  },
+  { name: 'Sledge Precision Artillery', sequence: 'DWAWSD', icon: Sledge_Precision_Artillery },
+  { name: 'Orbital Laser Strike', sequence: 'DWAWDA', icon: Orbital_Laser_Strike },
+  { name: 'Shredder Missile Strike', sequence: 'DADASSD', icon: Shredder_Missile_Strike },
   { name: 'Railcannon Strike', sequence: 'DSWSA', icon: Railcannon_Strike },
 ];
 
 export const SpecialStratagems: IStratagem[] = [
   { name: 'Reinforce', sequence: 'WSDAW', icon: Reinforce },
   { name: 'NUX-223 Hellbomb', sequence: 'WADSWS', icon: NUX_223_Hellbomb },
-  {
-    name: 'ME-1 Sniffer Metal Detector',
-    sequence: 'SSDW',
-    icon: ME_1_Sniffer_Metal_Detector,
-  },
+  { name: 'ME-1 Sniffer Metal Detector', sequence: 'SSDW', icon: ME_1_Sniffer_Metal_Detector },
   { name: 'Emergency Beacon', sequence: 'WSDW', icon: Emergency_Beacon },
 ];
 
