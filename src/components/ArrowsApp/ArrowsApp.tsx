@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { StratagemsMap } from 'constants/stratagems-sequences';
-import up from '../../../assets/icons/up.svg';
-import left from '../../../assets/icons/left.svg';
-import down from '../../../assets/icons/down.svg';
-import right from '../../../assets/icons/right.svg';
+import up from '../../../assets/icons/arrows/up.svg';
+import left from '../../../assets/icons/arrows/left.svg';
+import down from '../../../assets/icons/arrows/down.svg';
+import right from '../../../assets/icons/arrows/right.svg';
 import './ArrowsApp.css';
 
 const ArrowDirections: Record<string, string> = {
