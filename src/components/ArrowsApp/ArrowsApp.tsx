@@ -4,6 +4,7 @@ import up from '../../../assets/icons/arrows/up.svg';
 import left from '../../../assets/icons/arrows/left.svg';
 import down from '../../../assets/icons/arrows/down.svg';
 import right from '../../../assets/icons/arrows/right.svg';
+import Unrecognized from '../../../assets/icons/stratagems/png/Unrecognized.png';
 import './ArrowsApp.css';
 
 const ArrowDirections: Record<string, string> = {
@@ -61,7 +62,7 @@ const ArrowsApp: React.FC = () => {
   }, []);
 
   const icons = arrowSequence.split('').map((arrow) => arrowToIcon[arrow]);
-  const recognizedSequence = StratagemsMap.get(arrowSequence);
+  const recognizedStratagem = StratagemsMap.get(arrowSequence);
 
   return (
     <div className='App'>
@@ -73,7 +74,16 @@ const ArrowsApp: React.FC = () => {
         ) : (
           <div className='stratagem-container'>
             <h2>Request...</h2>
-            <h3>{recognizedSequence || '?'}</h3>
+            <h3>
+              {recognizedStratagem?.name || '\u00A0'}
+              {/* Non-breaking space if empty */}
+            </h3>
+            <img
+              src={recognizedStratagem?.icon || Unrecognized}
+              width={120}
+              height={120}
+              alt='arrow'
+            />
           </div>
         )}
       </div>
