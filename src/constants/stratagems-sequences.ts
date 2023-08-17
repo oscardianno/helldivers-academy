@@ -55,7 +55,7 @@ import Orbital_Laser_Strike from '../../assets/icons/stratagems/png/Orbital Lase
 import EXO_51_Lumberer_Exosuit from '../../assets/icons/stratagems/png/EXO-51 Lumberer Exosuit.png';
 import Railcannon_Strike from '../../assets/icons/stratagems/png/Railcannon Strike.png';
 
-interface IStratagem {
+export interface IStratagem {
   name: string;
   sequence: string;
   icon: string;
