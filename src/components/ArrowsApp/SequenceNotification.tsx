@@ -33,8 +33,9 @@ const SequenceNotification = ({ sequence }: SequenceNotificationProps) => {
     >
       <img src={sequence.icon} alt={sequence.name} />
       <div className='notification-arrows'>
-        {icons.map((icon) => (
-          <img src={icon} alt='arrow' />
+        {icons.map((icon, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <img key={index} src={icon} alt='arrow' />
         ))}
         {longerThanMax && <span>...</span>}
       </div>

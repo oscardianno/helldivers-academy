@@ -119,15 +119,17 @@ const ArrowsApp: React.FC = () => {
       <div className='arrows-container'>
         {showArrows && (
           <div className='arrows'>
-            {icons.map((icon) => (
-              <img src={icon} width={80} height={80} alt='arrow' />
+            {icons.map((icon, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <img key={index} src={icon} width={80} height={80} alt='arrow' />
             ))}
           </div>
         )}
       </div>
       <div className='bottom-right'>
-        {sequenceHistory.map((sequence) => (
-          <SequenceNotification sequence={sequence} />
+        {sequenceHistory.map((sequence, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <SequenceNotification key={index} sequence={sequence} />
         ))}
       </div>
       <div className='bottom-container'>
