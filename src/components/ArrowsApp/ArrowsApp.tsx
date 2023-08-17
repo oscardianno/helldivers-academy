@@ -98,6 +98,7 @@ const ArrowsApp: React.FC = () => {
         {showIntro ? (
           <div className='instructions-container'>
             <h3>Hold CTRL and type Stratagem sequences using the WASD keys</h3>
+            <h3>Press CTRL + R to restart</h3>
           </div>
         ) : (
           <div className='stratagem-container'>
