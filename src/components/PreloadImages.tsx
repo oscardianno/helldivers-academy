@@ -2,7 +2,7 @@ import up from '../../assets/icons/arrows/up.svg';
 import left from '../../assets/icons/arrows/left.svg';
 import down from '../../assets/icons/arrows/down.svg';
 import right from '../../assets/icons/arrows/right.svg';
-
+/* eslint-disable camelcase */
 import A_AC_6_Tesla_Tower from '../../assets/icons/stratagems/png/A-AC-6 Tesla Tower.png';
 import FLAM_40_Incinerator from '../../assets/icons/stratagems/png/FLAM-40 Incinerator.png';
 import REC_6_Demolisher from '../../assets/icons/stratagems/png/REC-6 Demolisher.png';

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import A_AC_6_Tesla_Tower from '../../assets/icons/stratagems/png/A-AC-6 Tesla Tower.png';
 import FLAM_40_Incinerator from '../../assets/icons/stratagems/png/FLAM-40 Incinerator.png';
 import REC_6_Demolisher from '../../assets/icons/stratagems/png/REC-6 Demolisher.png';
