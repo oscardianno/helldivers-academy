@@ -79,12 +79,20 @@ const ArrowsApp: React.FC = () => {
         if (startTime !== null && endTime !== null) {
           elapsedTime = endTime - startTime;
         }
-        const recognizedStratagem = (StratagemsMap.get(arrowSequence) || {
-          name: 'Unrecognized',
-          sequence: arrowSequence,
-          icon: Unrecognized,
-        }) as IStratagemWithTime;
-        recognizedStratagem.elapsedTime = elapsedTime;
+        let recognizedStratagem = StratagemsMap.get(
+          arrowSequence,
+        ) as IStratagemWithTime;
+        recognizedStratagem = recognizedStratagem
+          ? {
+              ...recognizedStratagem,
+              elapsedTime,
+            }
+          : {
+              name: 'Unrecognized',
+              sequence: arrowSequence,
+              icon: Unrecognized,
+              elapsedTime,
+            };
         setSequenceHistory((prevHistory) => [
           ...prevHistory,
           recognizedStratagem,
