@@ -33,7 +33,7 @@ const SequenceNotification = ({ sequence }: SequenceNotificationProps) => {
         }`}
       >
         <img src={sequence.icon} alt={sequence.name} />
-        <div className='notification-arrows'>
+        <div className='arrows'>
           {icons.map((icon, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <img key={index} src={icon} alt='arrow' />

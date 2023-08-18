@@ -40,7 +40,7 @@ body {
   align-items: center;
 }
 
-.arrows {
+.arrows-container .arrows {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
