@@ -61,6 +61,10 @@ export interface IStratagem {
   icon: string;
 }
 
+export interface IStratagemWithTime extends IStratagem {
+  elapsedTime: number;
+}
+
 export const SupplyStratagems: IStratagem[] = [
   { name: 'Resupply', sequence: 'SSWD', icon: Resupply },
   { name: 'MG-94 Machine Gun', sequence: 'SASWD', icon: MG_94_Machine_Gun },

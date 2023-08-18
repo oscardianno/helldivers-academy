@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { IStratagem, StratagemsMap } from 'constants/stratagems-sequences';
+import {
+  IStratagemWithTime,
+  StratagemsMap,
+} from 'constants/stratagems-sequences';
 import up from '../../../assets/icons/arrows/up.svg';
 import left from '../../../assets/icons/arrows/left.svg';
 import down from '../../../assets/icons/arrows/down.svg';
@@ -31,7 +34,11 @@ const ArrowsApp: React.FC = () => {
   const [arrowSequence, setArrowSequence] = useState('');
   const [showArrows, setShowArrows] = useState(true);
   const [registerSequence, setRegisterSequence] = useState(false);
-  const [sequenceHistory, setSequenceHistory] = useState<IStratagem[]>([]);
+  const [sequenceHistory, setSequenceHistory] = useState<IStratagemWithTime[]>(
+    [],
+  );
+  const [startTime, setStartTime] = useState<number | null>(null);
+  const [endTime, setEndTime] = useState<number | null>(null);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -42,6 +49,7 @@ const ArrowsApp: React.FC = () => {
       }
 
       if (event.key === 'Control') {
+        setStartTime(Date.now());
         setShowArrows(true);
       } else if (event.ctrlKey && arrowDirection) {
         setArrowSequence((prevSequence) => prevSequence + arrowDirection);
@@ -51,6 +59,7 @@ const ArrowsApp: React.FC = () => {
 
     const handleKeyUp = (event: KeyboardEvent) => {
       if (event.key === 'Control') {
+        setEndTime(Date.now());
         setRegisterSequence(true);
       }
     };
@@ -66,28 +75,28 @@ const ArrowsApp: React.FC = () => {
   useEffect(() => {
     if (registerSequence) {
       if (arrowSequence.length > 0) {
-        const recognizedStratagem = StratagemsMap.get(arrowSequence);
-        if (recognizedStratagem) {
-          setSequenceHistory((prevHistory) => [
-            ...prevHistory,
-            recognizedStratagem,
-          ]);
-        } else {
-          setSequenceHistory((prevHistory) => [
-            ...prevHistory,
-            {
-              name: 'Unrecognized',
-              sequence: arrowSequence,
-              icon: Unrecognized,
-            },
-          ]);
+        let elapsedTime = 0;
+        if (startTime !== null && endTime !== null) {
+          elapsedTime = endTime - startTime;
         }
+        const recognizedStratagem = (StratagemsMap.get(arrowSequence) || {
+          name: 'Unrecognized',
+          sequence: arrowSequence,
+          icon: Unrecognized,
+        }) as IStratagemWithTime;
+        recognizedStratagem.elapsedTime = elapsedTime;
+        setSequenceHistory((prevHistory) => [
+          ...prevHistory,
+          recognizedStratagem,
+        ]);
       }
+      setStartTime(null);
+      setEndTime(null);
       setRegisterSequence(false);
       setShowArrows(false);
       setArrowSequence('');
     }
-  }, [arrowSequence, registerSequence]);
+  }, [arrowSequence, registerSequence, startTime, endTime]);
 
   const icons = arrowSequence.split('').map((arrow) => arrowToIcon[arrow]);
   const recognizedStratagem = StratagemsMap.get(arrowSequence);
